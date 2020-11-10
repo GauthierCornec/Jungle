@@ -1,6 +1,8 @@
 package com.company;
 
 public class Predator {
+    private static final int s_iDrinkingQuantity = 3;
+
 
     private int m_iAgeNow;
     private int m_iAgeMax;
@@ -23,14 +25,20 @@ public class Predator {
     public void eat (Prey p_prey){
 
     };
-    public void drink (WaterSpot p_waterSpot){
-
-    };
+    public void drink (WaterSpot p_WaterSpot){
+        int waterAvailable = p_WaterSpot.getWaterForDrink(s_iDrinkingQuantity);
+    }
     public void mate (Predator p_predator){
 
-    };
+    }
 
+    void flee(Predator p_Predator){
 
+    }
+
+    public void update() {
+        drink(EcoSystem.getInstance().getWaterSpot());
+    }
 
 
 }

@@ -1,6 +1,7 @@
 package com.company;
 
 public class Prey {
+    private static final int s_iDrinkingQuantity = 3;
 
     private static int s_iMaxPreyAge = 30;
     private int m_iAgeNow;
@@ -22,6 +23,7 @@ public class Prey {
 
     }
     public void drink (WaterSpot p_WaterSpot){
+        int waterAvailable = p_WaterSpot.getWaterForDrink(s_iDrinkingQuantity);
 
     }
     public void flee(Predator p_Predator){
@@ -31,4 +33,6 @@ public class Prey {
 
     }
 
+    public void update() {
+    }
 }
